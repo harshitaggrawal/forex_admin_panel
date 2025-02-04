@@ -1,10 +1,9 @@
 import './App.css'
-import Admin from './routes/Admin'
+import Admin from '../routes/Admin'
 
 function App() {
   return (
     <>
-      harshit
       <Admin />
     </>
   )

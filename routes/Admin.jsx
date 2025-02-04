@@ -1,7 +1,8 @@
 import React from 'react'
-import Login from '../components/admin/Login'
-import Dashboard from '../components/admin/Dashboard'
+import Login from '../src/components/admin/Login'
+import Dashboard from '../src/components/admin/Dashboard'
 import { Routes, Route, Outlet } from 'react-router-dom'
+import HomePage from '../src/components/HomePage';
 
 const AdminLayout = () => {
   return (
@@ -13,7 +14,7 @@ const AdminLayout = () => {
 const Admin = () => {
   return (
     <Routes>
-     
+      <Route path="/" element={<HomePage />}></Route>
     <Route path="/admin" element={<AdminLayout />}>
       <Route index element={<Login />} /> 
       <Route path="dashboard" element={<Dashboard />} />

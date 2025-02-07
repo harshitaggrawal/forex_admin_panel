@@ -15,7 +15,7 @@ const Dashboard = () => {
     switch (activeTab) {
       case "Dashboard":
         return <DashboardPanel />;
-      case "Learning  Content":
+      case "Learning Content":
         return <LearningContent />;
       case "User Management":
         return <UserManagement />;
@@ -32,8 +32,8 @@ const Dashboard = () => {
 
   return (
     <div className="flex">
-      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <div className="flex-1 bg-gray-200 min-h-screen">
+      <Sidebar activeTab={""}/>
+      <div className="flex-1 bg-gray-200 min-h-screen lg:ml-[250px]">
         <Topbar />
         {renderContent()}
       </div>

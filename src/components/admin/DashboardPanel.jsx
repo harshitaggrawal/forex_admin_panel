@@ -1,7 +1,13 @@
 import React from 'react'
 import { FaChartLine } from "react-icons/fa";
+import Topbar from './Topbar'
+import Sidebar from './Sidebar'
 const DashboardPanel = () => {
     return (
+        <div className="flex">
+      <Sidebar activeTab={"Dashboard"}/>
+      <div className="flex-1 bg-gray-200 min-h-screen lg:ml-[250px]">
+        <Topbar />
         <div className='w-full px-[6%] py-4'>
 
             <div className='grid grid-cols-1 md:grid-cols-2 w-full justify-start gap-8'>
@@ -35,6 +41,9 @@ const DashboardPanel = () => {
 
             </div>
         </div>
+      </div>
+    </div>
+        
     )
 }
 
